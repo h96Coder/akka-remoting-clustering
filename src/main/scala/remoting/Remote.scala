@@ -41,7 +41,7 @@ class MasterActor extends Actor with ActorLogging {
      }
    context.become(online(workers, remainingTask + sentence.length, totalCount))
   case WordCountResult(count) =>
-   log.info(s"total count  $count")
+   log.info(s"total count  $totalCount")
    if(remainingTask == 1) {
     workers.foreach(_ ! PoisonPill)
     context.stop(self)
