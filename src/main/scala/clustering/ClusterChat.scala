@@ -1,7 +1,9 @@
-import ChatObject.{ChatMessage, EnterRoom, UserMessage}
+package clustering
+
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
 import akka.cluster.Cluster
 import akka.cluster.ClusterEvent._
+import clustering.ChatObject.{ChatMessage, EnterRoom, UserMessage}
 import com.typesafe.config.ConfigFactory
 
 object ChatObject{
